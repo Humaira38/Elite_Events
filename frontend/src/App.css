@@ -486,7 +486,7 @@ nav svg {
   border: none;
   padding: 15px 0;
   border-radius: 10px;
-  background-color: rgba(255, 247, 234, 0.9);
+  background-color: #f9f7f1;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -521,6 +521,7 @@ nav svg {
 .contact .banner:last-child .item form div {
   display: flex;
   gap: 20px;
+  
 }
 
 .contact .banner:last-child .item form div input {
@@ -665,6 +666,7 @@ footer .banner .tag div button {
   padding-top: 75px;
   padding-bottom: 75px;
   position: relative; /* Ensure the overlay is positioned correctly */
+ 
 }
 
 /* Add an overlay for better text readability */
@@ -680,22 +682,23 @@ footer .banner .tag div button {
 }
 
 .about h2 {
-  color: #1b160c;
-  font-weight: 800;
-  font-size: 32px;
-  margin-bottom: 20px;
-  letter-spacing: 4px;
-  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2); /* Added subtle text shadow for readability */
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  font-family: 'Cormorant Garamond', serif; /* Updated font for header */
+  font-weight: bold;
+  color: #333;
+  transition: color 0.3s ease;
 }
 
 .about p {
   line-height: 36px;
   letter-spacing: 2px;
-  word-spacing: 6px;
+  word-spacing: 4px;
   color: #080808; /* Make the text color darker for better contrast */
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1); /* Subtle shadow for better readability */
-  font-weight: 400;
-  font-size: 20px;
+  font-weight: 600;
+  font-size: 22px;
 }
 
 .services {
@@ -703,12 +706,13 @@ footer .banner .tag div button {
   padding-bottom: 75px;
 }
 .services h2 {
-  color:#1b160c;
-  font-weight: 800;
-  font-size: 32px;
-  margin-bottom: 20px;
-  letter-spacing: 4px;
-  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  font-family: 'Cormorant Garamond', serif; /* Updated font for header */
+  font-weight: bold;
+  color: #333;
+  transition: color 0.3s ease;
 }
 .services .banner {
   display: grid;
@@ -796,7 +800,7 @@ footer .banner .tag div button {
 
 /* Heading Styling */
 .review-section {
-  background: rgba(255, 247, 234, 0.9); /* Darker shade of #fff7ea */
+  background: #f9f7f1; /* Darker shade of #fff7ea */
   padding: 40px;
   border-radius: 10px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
@@ -1289,12 +1293,13 @@ footer .banner .tag div button {
 
 /* Section Title */
 .packages-section h2 {
-  color:#1b160c;
-  font-weight: 800;
-  font-size: 32px;
-  margin-bottom: 30px;
-  letter-spacing: 4px;
-  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  font-family: 'Cormorant Garamond', serif; /* Updated font for header */
+  font-weight: bold;
+  color: #333;
+  transition: color 0.3s ease;
 }
 
 /* Grid Layout for Boxes */
@@ -1307,7 +1312,7 @@ footer .banner .tag div button {
 
 /* Individual Package Card */
 .package-card {
-  background-color: rgba(255, 247, 234, 0.9); /* Slightly transparent card background */
+  background-color: #f9f7f1; /* Slightly transparent card background */
   border: 1px solid #e6dccb;
   border-radius: 10px;
   width: 300px; /* Fixed width for uniformity */
@@ -1347,6 +1352,129 @@ footer .banner .tag div button {
   color: #3d3939;
   font-size: 0.9rem;
   line-height: 1.4;
+}
+
+/* Overall Portfolio Section */
+.portfolio {
+  padding: 2rem;
+  background-color: #f9f7f1;
+  font-family: 'Nunito Sans', sans-serif; /* Added new font family */
+}
+
+/* Portfolio Header */
+.portfolio h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  font-family: 'Cormorant Garamond', serif; /* Updated font for header */
+  font-weight: bold;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.portfolio h2:hover {
+  color: #a2783a; /* Hover effect on the title */
+}
+
+/* Portfolio List Layout */
+.portfolio-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  overflow: hidden; /* Prevents scrollbars in slider */
+}
+
+/* Portfolio Item Styling */
+.portfolio-item {
+  width: 30%;
+  margin: 1rem;
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  transform: scale(0.95);
+  opacity: 0.8;
+  transition: transform 0.3s ease, opacity 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Portfolio Item Hover Effect */
+.portfolio-item:hover {
+  transform: scale(1);
+  opacity: 1;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Portfolio Image Styling */
+.portfolio-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+/* Image Hover Effect */
+.portfolio-item img:hover {
+  transform: scale(1.05); /* Zoom effect on image hover */
+}
+
+/* Portfolio Item Heading */
+.portfolio-item h3 {
+  text-align: center;
+  font-size: 1.6rem;
+  margin: 1rem 0;
+  font-family: 'Alex Brush', cursive; /* New font for titles */
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.portfolio-item h3:hover {
+  color: #a2783a; /* Hover effect on title text */
+}
+
+/* Slider Container */
+.portfolio-slider {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 1rem;
+  padding-bottom: 1rem; /* Optional: adds spacing below the slider */
+  margin: 0 auto;
+}
+
+.portfolio-slider::-webkit-scrollbar {
+  height: 8px;
+}
+
+.portfolio-slider::-webkit-scrollbar-thumb {
+  background-color: #a2783a;
+  border-radius: 4px;
+}
+
+.portfolio-slider::-webkit-scrollbar-track {
+  background-color: #f9f7f1;
+}
+
+.portfolio-item {
+  flex: 0 0 auto;
+  width: 250px;
+}
+
+/* Optional: Add responsiveness for smaller screens */
+@media (max-width: 768px) {
+  .portfolio-item {
+    width: 45%;
+  }
+
+  .portfolio-slider {
+    gap: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .portfolio-item {
+    width: 90%;
+  }
 }
 
 
