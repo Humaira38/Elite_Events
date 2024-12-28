@@ -466,141 +466,158 @@ nav svg {
     font-size: 14px;
   }
 } 
+/* Contact Section */
 .contact {
+  padding-top: 75px;
+  padding-bottom: 75px;
+
   display: flex;
   flex-direction: column;
-  gap: 30px;
-  
+  align-items: center;
+  gap: 50px;
+  text-align: center;
 }
-  
 
+/* Section Heading */
+.contact h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  font-family: 'Cormorant Garamond', serif; /* Updated font for header */
+  font-weight: bold;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.contact h2::after {
+  content: "";
+  width: 60px;
+  height: 3px;
+  background-color: #a2783a;
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Contact Banners */
 .contact .banner {
   display: flex;
-  gap: 30px;
+  gap: 40px;
+  width: 100%;
+  max-width: 1200px;
 }
 
 .contact .banner .item {
   flex: 1;
+  background: linear-gradient(145deg, #ffffff, #e6e0d7);
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1), -4px -4px 10px rgba(255, 255, 255, 0.8);
+  border-radius: 12px;
+  padding: 25px;
   display: flex;
   flex-direction: column;
-  gap: 10px;
   align-items: center;
-  border: none;
-  padding: 15px 0;
-  border-radius: 10px;
-  background-color: #f9f7f1;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .contact .banner .item:hover {
-  transform: translateY(-5px);
-  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+  transform: scale(1.05);
+  box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.15), -6px -6px 15px rgba(255, 255, 255, 0.9);
 }
 
+/* Item Heading and Description */
 .contact .banner .item h4 {
-  font-weight: 800;
+  font-size: 1.8rem;
   font-family: "Alex Brush", cursive;
-  font-size: 2rem;
-  color: #363430;
+  color: #a2783a;
+  margin-bottom: 10px;
 }
 
 .contact .banner .item p {
-  color: #a88820;
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.5;
+  text-align: center;
+  padding: 0 15px;
 }
 
+/* Contact Form */
 .contact .banner:last-child .item {
-  border: none;
+  flex: 1.5;
+  padding: 30px;
+  background: #ffffff;
+  border: 1px solid #e6dccb;
 }
 
-.contact .banner:last-child .item form {
-  width: 100%;
-  padding: 0 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.contact .banner:last-child .item form div {
-  display: flex;
-  gap: 20px;
+.contact .banner:last-child .item h2 {
+  font-size: 2rem;
+  font-family: "Cormorant Garamond", serif;
+  color: #333;
+  margin-bottom: 20px;
   
 }
 
-.contact .banner:last-child .item form div input {
-  flex: 1;
-  padding: 10px;
-  font-size: 1rem;
-  transition: box-shadow 0.3s ease, border-color 0.3s ease;
-}
-
-.contact .banner:last-child .item form div input:hover {
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-.contact .banner:last-child .item form div input:focus {
-  outline: none;
-  border-color: #a2783a;
-  box-shadow: 0px 4px 15px rgba(162, 120, 58, 0.5);
-}
-
-.contact .banner:last-child .item form h2 {
-  font-size: 32px;
-  font-weight: 800;
-  letter-spacing: 3px;
-  color: #363430;
+.contact .banner:last-child .item form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
 }
 
 .contact .banner:last-child .item form input,
 .contact .banner:last-child .item form textarea {
-  padding: 8px;
-  background: transparent;
-  border: 1px solid #0c0c0c;
-  border-radius: 7px;
-  transition: all 0.3s ease;
- 
+  width: 100%;
+  padding: 15px;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: #fdfdfd;
+  box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
-.contact .banner:last-child .item form textarea:hover,
+.contact .banner:last-child .item form input:focus,
 .contact .banner:last-child .item form textarea:focus {
-  box-shadow: 0px 4px 15px rgba(162, 120, 58, 0.5);
   border-color: #a2783a;
+  box-shadow: 0px 4px 10px rgba(162, 120, 58, 0.3);
+}
+
+.contact .banner:last-child .item form textarea {
+  resize: none;
+  height: 120px;
 }
 
 .contact .banner:last-child .item form button {
-  padding: 10px 60px;
-  font-size: 24px;
+  padding: 12px 40px;
+  font-size: 1.2rem;
   color: #fff;
   background: #a2783a;
-  font-weight: 300;
-  font-family: "Alex Brush", cursive;
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: bold;
   border: none;
-  width: fit-content;
+  border-radius: 8px;
+  cursor: pointer;
   transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .contact .banner:last-child .item form button:hover {
-  background-color: #8f662e;
+  background: #8f662e;
   transform: translateY(-3px);
 }
 
-.contact .banner:last-child .item form button:active {
-  transform: translateY(0);
-}
-
-@media (max-width: 830px) {
+/* Responsive Adjustments */
+@media (max-width: 960px) {
   .contact .banner {
     flex-direction: column;
+    gap: 30px;
+  }
+
+  .contact .banner:last-child .item {
+    flex: 1;
   }
 }
 
-@media (max-width: 640px) {
-  .contact .banner:last-child .item form {
-    padding: 0;
-  }
-  .contact .banner:last-child .item form div {
-    flex-direction: column;
-  }
-}
+
 footer {
   padding: 40px 20px;
   background-color: #333; /* Dark background for elegance */
@@ -847,6 +864,7 @@ footer .content {
 }
 /* Scoped Reviews Section */
 /* Overall Review Section */
+/* Review Section */
 .review-section {
   padding: 40px;
   border-radius: 10px;
@@ -856,7 +874,10 @@ footer .content {
   margin: 50px auto;
   font-family: "Nunito Sans", sans-serif;
   animation: fadeIn 1.5s ease-out; /* Add fade-in animation */
-  background: #fff7ea; /* Neutral background color */
+  background: #f9f7f1; ; /* Neutral background color */
+  max-width: 1000px; /* Set a max-width for larger screens */
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 /* Animations */
@@ -890,23 +911,6 @@ footer .content {
 }
 
 /* Heading Styling */
-.review-section {
-  background: #f9f7f1; /* Darker shade of #fff7ea */
-  padding: 40px;
-  border-radius: 10px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-  max-width: 800px;
-  margin: 50px auto;
-  font-family: "Nunito Sans", sans-serif;
-  animation: fadeIn 1s ease-in-out;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.review-section:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
-}
-
 .review-section h2 {
   color: #000;
   font-weight: 800;
@@ -932,84 +936,81 @@ footer .content {
   width: 100px;
 }
 
-.review-section .review-form {
+/* Review Form */
+.review-form {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 
-.review-section .review-form div {
+.review-form div {
   display: flex;
   gap: 20px;
   flex-wrap: wrap;
 }
 
-.review-section .review-form div input {
+.review-form div input,
+.review-form div textarea {
   flex: 1;
   min-width: calc(50% - 20px);
 }
 
-.review-section .review-form input,
-.review-section .review-form textarea {
+/* Styling inputs and textarea like the contact form */
+.review-form input,
+.review-form textarea {
   width: 100%;
-  padding: 12px;
-  font-size: 16px;
-  color: #333;
-  background: #fff;
-  border: 1px solid #3d3323;
-  border-radius: 7px;
+  padding: 15px;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: #fdfdfd;
+  box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.review-form input:focus,
+.review-form textarea:focus {
+  border-color: #a2783a;
+  box-shadow: 0px 4px 10px rgba(162, 120, 58, 0.3);
+}
+
+.review-form textarea {
   resize: none;
-  font-family: "Nunito Sans", sans-serif;
-  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  height: 120px;
 }
 
-.review-section .review-form input:hover,
-.review-section .review-form textarea:hover {
-  border-color: #8d6930;
-  box-shadow: 0 4px 8px rgba(141, 105, 48, 0.2);
-}
-
-.review-section .review-form input:focus,
-.review-section .review-form textarea:focus {
-  outline: none;
-  border-color: #8d6930;
-  box-shadow: 0 0 8px rgba(141, 105, 48, 0.4);
-}
-
-.review-section .review-form textarea {
-  height: 150px;
-}
-
-.review-section .review-form button {
-  padding: 12px 40px;
-  font-size: 16px;
-  font-weight: 500;
+/* Submit Button */
+.review-form button {
+  padding: 10px 30px; /* Smaller button */
+  font-size: 1rem;
   color: #fff;
-  background: #252320;
+  background: #a2783a;
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: bold;
   border: none;
-  border-radius: 7px;
+  border-radius: 8px;
   cursor: pointer;
-  transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0 5px 10px rgba(162, 120, 58, 0.4);
-  align-self: center;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 5px 10px rgba(162, 120, 58, 0.4); /* Adding box-shadow for the button */
 }
 
-.review-section .review-form button:hover {
-  background: #8d6930;
+.review-form button:hover {
+  background: #8f662e;
   transform: translateY(-3px);
-  box-shadow: 0 8px 16px rgba(141, 105, 48, 0.5);
+  box-shadow: 0 8px 16px rgba(141, 105, 48, 0.5); /* Hover effect */
 }
 
-.review-section .review-form button:active {
-  transform: scale(0.95);
+.review-form button:active {
+  transform: scale(0.95); /* Active effect */
 }
 
-.review-section .reviews-list {
+/* Review List */
+.reviews-list {
   margin-top: 40px;
   animation: fadeIn 1.5s ease-in-out;
 }
 
-.review-section .reviews-list h2 {
+.reviews-list h2 {
   font-family: "Alex Brush", cursive;
   color: #2e2b25;
   font-size: 28px;
@@ -1018,11 +1019,12 @@ footer .content {
   transition: color 0.3s ease;
 }
 
-.review-section .reviews-list h2:hover {
+.reviews-list h2:hover {
   color: #a2783a;
 }
 
-.review-section .review-item {
+/* Review Item */
+.review-item {
   background: #fff;
   padding: 20px;
   border: 1px solid #a2783a;
@@ -1033,50 +1035,27 @@ footer .content {
   animation: slideUp 1s ease-in-out;
 }
 
-.review-section .review-item:hover {
+.review-item:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
 }
 
-.review-section .review-item h4 {
+.review-item h4 {
   font-size: 20px;
   font-weight: bold;
   color: #a2783a;
   transition: color 0.3s ease;
 }
 
-.review-section .review-item h4:hover {
+.review-item h4:hover {
   color: #8d6930;
 }
 
-.review-section .review-item p {
+.review-item p {
   font-size: 16px;
   color: #333;
   margin-top: 10px;
   line-height: 1.5;
-}
-
-/* Animations */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes slideUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }
 
 /* Floating button style */
