@@ -6,6 +6,7 @@ import reviewRouter from "./router/reviewRouter.js";
 import chatbotRouter from "./router/chatbotRouter.js"; // Import the chatbot router
 import userRouter from "./router/userRouter.js";
 import packageRouter from "./router/packageRouter.js";
+
 import cors from "cors";
 
 const app = express();
@@ -32,6 +33,7 @@ app.use("/api/v1/reviews", reviewRouter); // Use the review router for reviews
 app.use("/api/v1/chatbot", chatbotRouter);  // Ensure the chatbot route is added
 app.use("/api/v1/users", userRouter);
 app.use("/api/v1/packages", packageRouter);
+
 // Connect to the database
 dbConnection();
 
